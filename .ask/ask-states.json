@@ -1,0 +1,51 @@
+{
+  "askcliStatesVersion": "2020-03-31",
+  "profiles": {
+    "default": {
+      "skillId": "amzn1.ask.skill.907001cc-79dd-4200-8722-75707ea2f449",
+      "skillMetadata": {
+        "lastDeployHash": "3fKA2yKz6TfjYfhhz9Fgj/DSBok="
+      },
+      "code": {
+        "default": {}
+      },
+      "skillInfrastructure": {
+        "@ask-cli/lambda-deployer": {
+          "deployState": {
+            "default": {
+              "lambda": {
+                "arn": "arn:aws:lambda:eu-west-1:383537978421:function:ask-custom-ilgiornale-custom-skill-default",
+                "lastModified": "2020-05-07T15:20:04.673+0000",
+                "revisionId": "252a6758-959f-4458-a403-a90c76aebf2e"
+              },
+              "iamRole": "arn:aws:iam::383537978421:role/ask-lambda-ilgiornale"
+            }
+          }
+        }
+      }
+    },
+    "alexalab": {
+      "skillId": "amzn1.ask.skill.40a6af25-fb7d-4577-addb-631fbb6132f8",
+      "skillMetadata": {
+        "lastDeployHash": "pTsfxHjiVoDss9zmnB+oRLMdRBo="
+      },
+      "code": {
+        "default": {}
+      },
+      "skillInfrastructure": {
+        "@ask-cli/lambda-deployer": {
+          "deployState": {
+            "default": {
+              "iamRole": "arn:aws:iam::075386326567:role/ask-lambda-ilGiornale-1589564126082",
+              "lambda": {
+                "arn": "arn:aws:lambda:eu-west-1:075386326567:function:ask-ilgiornale-alexalab-default-1589564139015",
+                "lastModified": "2020-05-15T20:03:56.370+0000",
+                "revisionId": "6d71c019-2883-4d2f-8771-78287d9afe2b"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

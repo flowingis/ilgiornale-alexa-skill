@@ -1,0 +1,6 @@
+node_modules/
+package-lock.json
+.DS_Store
+.legacy
+.ask/lambda/
+lambda/lambdacustom/api/config.json

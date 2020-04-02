@@ -1,0 +1,12 @@
+{
+  "name": "ilgiornale-custom-skill",
+  "version": "0.0.1",
+  "description": "Skill Alexa per il giornale.it",
+  "scripts": {
+    "deploy": "ask deploy --profile alexalab",
+    "predeploy": "npx standard . --fix"
+  },
+  "devDependencies": {
+    "standard": "^14.3.3"
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "il giornale",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "ReadCategoryIntent",
+          "slots": [
+            {
+              "name": "Category",
+              "type": "Category",
+              "samples": [
+                "{Category} "
+              ]
+            }
+          ],
+          "samples": [
+            "{Category}",
+            "Leggimi le notizie di {Category}",
+            "Leggi {Category}",
+            "Voglio ascoltare {Category}"
+          ]
+        },
+        {
+          "name": "ReadArticleIntent",
+          "slots": [
+            {
+              "name": "ArticleIndex",
+              "type": "ArticleIndex",
+              "samples": [
+                " {ArticleIndex}"
+              ]
+            }
+          ],
+          "samples": [
+            "numero {ArticleIndex}",
+            "{ArticleIndex}",
+            "leggimi il post numero {ArticleIndex}",
+            "leggimi il {ArticleIndex} post",
+            "leggimi l articolo numero {ArticleIndex}",
+            "leggimi il {ArticleIndex} articolo",
+            "leggimi la {ArticleIndex} notizia",
+            "leggimi la notizia numero {ArticleIndex}",
+            "leggimi il numero {ArticleIndex}",
+            "leggimi la numero {ArticleIndex}",
+            "leggimi il titolo {ArticleIndex}",
+            "leggimi il {ArticleIndex}",
+            "leggimi la {ArticleIndex}",
+            "apri il post numero {ArticleIndex}",
+            "apri il {ArticleIndex} post",
+            "apri l\u0027 articolo numero {ArticleIndex}",
+            "apri il {ArticleIndex} articolo",
+            "apri la {ArticleIndex} notizia",
+            "apri la notizia numero {ArticleIndex}",
+            "apri il numero {ArticleIndex}",
+            "apri la numero {ArticleIndex}",
+            "apri il {ArticleIndex}",
+            "apri la {ArticleIndex}",
+            "apri il titolo {ArticleIndex}",
+            "approfondisci il post numero {ArticleIndex}",
+            "approfondisci il {ArticleIndex} post",
+            "approfondisci l\u0027 articolo numero {ArticleIndex}",
+            "approfondisci il {ArticleIndex} articolo",
+            "approfondisci la {ArticleIndex} notizia",
+            "approfondisci la notizia numero {ArticleIndex}",
+            "approfondisci il numero {ArticleIndex}",
+            "approfondisci la numero {ArticleIndex}",
+            "approfondisci il {ArticleIndex}",
+            "approfondisci la {ArticleIndex}",
+            "approfondisci il titolo {ArticleIndex}",
+            "consulta il post numero {ArticleIndex}",
+            "consulta il {ArticleIndex} post",
+            "consulta l\u0027 articolo numero {ArticleIndex}",
+            "consulta il {ArticleIndex} articolo",
+            "consulta la {ArticleIndex} notizia",
+            "consulta la notizia numero {ArticleIndex}",
+            "consulta il numero {ArticleIndex}",
+            "consulta la numero {ArticleIndex}",
+            "consulta il {ArticleIndex}",
+            "consulta la {ArticleIndex}",
+            "consulta il titolo {ArticleIndex}"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "40821",
+              "name": {
+                "value": "cronaca",
+                "synonyms": [
+                  "cronache"
+                ]
+              }
+            },
+            {
+              "id": "40819",
+              "name": {
+                "value": "politica"
+              }
+            },
+            {
+              "id": "40822",
+              "name": {
+                "value": "economia"
+              }
+            }
+          ],
+          "name": "Category"
+        },
+        {
+          "values": [
+            {
+              "id": "4",
+              "name": {
+                "value": "4",
+                "synonyms": [
+                  "4",
+                  "quattro",
+                  "quarto",
+                  "quarta"
+                ]
+              }
+            },
+            {
+              "id": "3",
+              "name": {
+                "value": "3",
+                "synonyms": [
+                  "3",
+                  "tre",
+                  "terzo",
+                  "terza"
+                ]
+              }
+            },
+            {
+              "id": "2",
+              "name": {
+                "value": "2",
+                "synonyms": [
+                  "2",
+                  "due",
+                  "secondo",
+                  "seconda"
+                ]
+              }
+            },
+            {
+              "id": "1",
+              "name": {
+                "value": "1",
+                "synonyms": [
+                  "1",
+                  "uno",
+                  "primo",
+                  "prima"
+                ]
+              }
+            }
+          ],
+          "name": "ArticleIndex"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "ReadCategoryIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Category",
+              "type": "Category",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1175130386657.111744244295"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        },
+        {
+          "name": "ReadArticleIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "ArticleIndex",
+              "type": "ArticleIndex",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1093247676118.101362802286"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1175130386657.111744244295",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Che categoria di notizie vuoi leggere?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1093247676118.101362802286",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Quale articolo vuoi che ti legga?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "39"
+}
