@@ -39,8 +39,8 @@
               "iamRole": "arn:aws:iam::075386326567:role/ask-lambda-ilGiornale-1589564126082",
               "lambda": {
                 "arn": "arn:aws:lambda:eu-west-1:075386326567:function:ask-ilgiornale-alexalab-default-1589564139015",
-                "lastModified": "2020-05-15T20:03:56.370+0000",
-                "revisionId": "6d71c019-2883-4d2f-8771-78287d9afe2b"
+                "lastModified": "2020-05-21T12:25:48.220+0000",
+                "revisionId": "c933bee2-955b-48a3-a400-0412b0b5e81e"
               }
             }
           }

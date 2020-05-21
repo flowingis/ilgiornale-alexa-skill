@@ -2,6 +2,7 @@ const axios = require('axios')
 const _ = require('lodash')
 const textVersion = require('./parseHtml')
 const { baseUrl } = require('./config.json')
+const he = require('he')
 
 const SIZE = 4
 
@@ -10,13 +11,13 @@ const MAX_SIZE = 6000
 const SENTENCES_SPLITTER = /[^\\.!\\?]+[\\.!\\?]+/g
 
 const cleanupText = s => {
-  return s
+  return he.decode(s
     .replace(/&#39;/g, "'")
     .replace(/"/g, '')
     .replace(/&quot;/g, '"')
     .replace(/\r?\n|\r/g, '')
     .replace(/\t/g, '')
-    .replace(/ '/gm, "'")
+    .replace(/ '/gm, "'"))
 }
 
 const parseContentInfo = content => {
